@@ -1,0 +1,293 @@
+@media only screen and (max-width: 1000px) {
+  section.highlight {
+    margin-top: 0px;
+  }
+}
+@media only screen and (max-width: 451px) {
+  div.name h1 {
+    display: none;
+  }
+}
+@media only screen and (max-width: 291px) {
+  .header-icons {
+    display: none;
+  }
+  section.connect {
+    display: block;
+  }
+  header.static h1 {
+    font-size: 15vw;
+  }
+  header.static small {
+    font-size: 10vw;
+  }
+}
+@media only screen and (max-height: 250px) {
+  header.sticky, div.name {
+    display: none;
+  }
+  .to-top {
+    display: none;
+  }
+}
+@media only print {
+  body {
+    color: black;
+    background-color: white;
+  }
+  .header-icons {
+    display: none;
+  }
+  .highlight {
+    display: none;
+  }
+  section.connect {
+    display: block;
+  }
+  section.connect p {
+    display: block;
+  }
+  .to-top {
+    display: none;
+  }
+}
+/* Make everything flush with each other */
+* {
+  margin: 0;
+}
+/* Set defaults for the entire document */
+body {
+  font-family: Karla, "Open Sans", "Segoe UI", "Helvetica Neue", Helvetica,
+    Arial, sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+  background-color: black;
+  color: #e0f2f1;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+/* Size, colour and add the ribbed pattern to the header */
+header.static {
+  height: 70vh;
+  position: relative;
+}
+header.sticky {
+  background-color: transparent;
+  height: 56px;
+  position: sticky;
+  top: 0px;
+}
+/* Make the header's subtitle a bit more bold */
+header h2 {
+  font-weight: 300;
+  text-align: center;
+}
+/* Push text down in the header */
+.static h1 {
+  padding-top: 20vh;
+  font-size: 70px;
+  line-height: 70px;
+}
+div.name h1 {
+  text-align: start;
+  font-size: 28px;
+  line-height: 56px;
+  padding-left: 66px;
+}
+header small {
+  display: block;
+  font-size: 40px;
+}
+/* Style the bold header text */
+h1 {
+  font-family: Montserrat, "Segoe UI", "Helvetica Neue", Helvetica, "Open Sans",
+    Arial, sans-serif;
+  font-weight: 600;
+  text-align: center;
+  text-transform: uppercase;
+}
+/* Style the subheadings */
+h2,
+.big {
+  font-family: Montserrat, "Segoe UI", "Helvetica Neue", Helvetica, "Open Sans",
+    Arial, sans-serif;
+  font-size: 30px;
+  font-weight: 200;
+}
+h2 {
+  line-height: 60px;
+}
+h3 {
+  font-family: Montserrat, "Segoe UI", "Helvetica Neue", Helvetica, "Open Sans",
+    Arial, sans-serif;
+  font-size: 20px;
+  font-weight: 300;
+}
+/* Pad the content in each section */
+section,
+aside,
+article {
+  border-radius: 20px;
+  padding: 20px;
+  max-width: 700px;
+  margin: auto;
+}
+section:first-of-type {
+  margin-top: 50px;
+}
+section.article-list {
+  margin-top: 0px;
+  padding: 0px;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+}
+/* Make odd-numbered sections lighter to distinguish between them */
+.highlight,
+article {
+  background-color: #222222;
+}
+/* Make icon buttons pretty */
+.svg-wrapper {
+  border-radius: 50%;
+  width: 2em;
+  height: 2em;
+  color: black;
+  background-color: white;
+  display: inline-block;
+  vertical-align: middle;
+}
+.header-icons {
+  float: right;
+  margin-top: calc(24px - 1em);
+  margin-right: 30px;
+}
+.icon-button {
+  transform: scale(0.5);
+}
+.devpost {
+  margin-top: 0.15em;
+}
+.background {
+  left: 0px;
+  top: 0px;
+  width: 100%;
+  height: calc(70vh + 56px);
+  position: absolute;
+  z-index: 1;
+}
+.connect {
+  display: none;
+}
+.connect p {
+  display: none;
+}
+footer {
+  text-align: center;
+  min-height: 100px;
+}
+.to-top {
+  transition: visibility 0s, opacity 0.5s ease;
+  border: none;
+  font-size: 1.5em;
+  color: white;
+  background-color: #1de9b6;
+  border-radius: 50%;
+  width: 56px;
+  height: 56px;
+  margin: auto;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  cursor: pointer;
+  -webkit-box-shadow: 2px 3px 3px 0px rgba(41, 41, 41, 0.3);
+  -moz-box-shadow: 2px 3px 3px 0px rgba(41, 41, 41, 0.3);
+  box-shadow: 2px 3px 3px 0px rgba(41, 41, 41, 0.3);
+}
+.to-top:not(.at-top) {
+  visibility: visible;
+  opacity: 1;
+}
+.at-top {
+  visibility: hidden;
+  opacity: 0;
+}
+.intro input {
+  font-family: Montserrat;
+  font-size: 30px;
+  font-weight: 200;
+  width: 300px;
+}
+input {
+  background-color: transparent;
+  border: none;
+  border-bottom: 2px solid #e0f2f1;
+  color: #e0f2f1;
+}
+section.connect {
+  z-index: 1;
+  height: 100%;
+  width: 100%;
+}
+
+p.footer {
+  font-size: 0.8em;
+}
+
+a {
+  text-decoration: none;
+}
+
+.fa-stack .fa-stack-1x {
+  color: black;
+}
+
+article {
+  flex: 1;
+  flex-grow: 1;
+  color: white;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-left: -20px;
+  margin-right: -20px;
+}
+.horizontal article {
+  margin-right: 40px;
+}
+header {
+  color: white;
+  z-index: 2;
+}
+div.name {
+  position: sticky;
+  top: 56px;
+  height: 0;
+}
+div.name div {
+  background: repeating-linear-gradient(
+      45deg,
+      transparent,
+      transparent 50px,
+      rgba(255, 255, 255, 0.1) 50px,
+      rgba(255, 255, 255, 0.1) 100px
+    ),
+    rgb(0, 150, 136);
+    height: 56px;
+    position: relative;
+    top: -56px;
+}
+.background {
+  background: repeating-linear-gradient(
+      45deg,
+      transparent,
+      transparent 50px,
+      rgba(255, 255, 255, 0.1) 50px,
+      rgba(255, 255, 255, 0.1) 100px
+    ),
+    rgb(0, 150, 136);
+}
+.amazing-logo {
+  height: 56px;
+  background-color: white;
+}

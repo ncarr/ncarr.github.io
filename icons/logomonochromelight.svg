@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   version="1.1"
+   id="svg2"
+   viewBox="0 0 384 384.00001"
+   height="384"
+   width="384">
+  <defs
+     id="defs4">
+    <filter
+       id="filter4203"
+       style="color-interpolation-filters:sRGB">
+      <feFlood
+         id="feFlood4205"
+         result="flood"
+         flood-color="rgb(26,35,126)"
+         flood-opacity="0.2" />
+      <feComposite
+         id="feComposite4207"
+         result="composite1"
+         operator="in"
+         in2="SourceGraphic"
+         in="flood" />
+      <feGaussianBlur
+         id="feGaussianBlur4209"
+         result="blur"
+         stdDeviation="8"
+         in="composite1" />
+      <feOffset
+         id="feOffset4211"
+         result="offset"
+         dy="8"
+         dx="0" />
+      <feComposite
+         id="feComposite4213"
+         result="composite2"
+         operator="over"
+         in2="offset"
+         in="SourceGraphic" />
+    </filter>
+    <filter
+       id="filter4232"
+       style="color-interpolation-filters:sRGB">
+      <feFlood
+         id="feFlood4234"
+         result="flood"
+         flood-color="rgb(26,35,126)"
+         flood-opacity="0.2" />
+      <feComposite
+         id="feComposite4236"
+         result="composite1"
+         operator="in"
+         in2="SourceGraphic"
+         in="flood" />
+      <feGaussianBlur
+         id="feGaussianBlur4238"
+         result="blur"
+         stdDeviation="24"
+         in="composite1" />
+      <feOffset
+         id="feOffset4240"
+         result="offset"
+         dy="24"
+         dx="0" />
+      <feComposite
+         id="feComposite4242"
+         result="composite2"
+         operator="over"
+         in2="offset"
+         in="SourceGraphic" />
+    </filter>
+    <filter
+       id="filter4317"
+       style="color-interpolation-filters:sRGB">
+      <feFlood
+         id="feFlood4319"
+         result="flood"
+         flood-color="rgb(26,35,126)"
+         flood-opacity="0.2" />
+      <feComposite
+         id="feComposite4321"
+         result="composite1"
+         operator="in"
+         in2="SourceGraphic"
+         in="flood" />
+      <feGaussianBlur
+         id="feGaussianBlur4323"
+         result="blur"
+         stdDeviation="8"
+         in="composite1" />
+      <feOffset
+         id="feOffset4325"
+         result="offset"
+         dy="4"
+         dx="0" />
+      <feComposite
+         id="feComposite4327"
+         result="composite2"
+         operator="over"
+         in2="offset"
+         in="SourceGraphic" />
+    </filter>
+    <filter
+       id="filter4329"
+       style="color-interpolation-filters:sRGB">
+      <feFlood
+         id="feFlood4331"
+         result="flood"
+         flood-color="rgb(26,35,126)"
+         flood-opacity="0.2" />
+      <feComposite
+         id="feComposite4333"
+         result="composite1"
+         operator="in"
+         in2="SourceGraphic"
+         in="flood" />
+      <feGaussianBlur
+         id="feGaussianBlur4335"
+         result="blur"
+         stdDeviation="8"
+         in="composite1" />
+      <feOffset
+         id="feOffset4337"
+         result="offset"
+         dy="0"
+         dx="0" />
+      <feComposite
+         id="feComposite4339"
+         result="composite2"
+         operator="over"
+         in2="offset"
+         in="SourceGraphic" />
+    </filter>
+  </defs>
+  <metadata
+     id="metadata7">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     transform="translate(0,-668.36216)"
+     style="display:inline"
+     id="layer1">
+    <rect
+       y="858.94391"
+       x="100.57996"
+       height="91.841042"
+       width="91.841042"
+       id="rect3336"
+       style="fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.3317166px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+    <rect
+       style="fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.3317166px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       id="rect3349"
+       width="91.841042"
+       height="91.841042"
+       x="192.5799"
+       y="766.94391" />
+    <rect
+       transform="matrix(0.89442854,0.4472109,0,1,0,0)"
+       y="716.61389"
+       x="112.36275"
+       height="92.000687"
+       width="205.71794"
+       id="rect3351"
+       style="fill:#bdbdbd;fill-opacity:1;stroke:none" />
+  </g>
+</svg>
