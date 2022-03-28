@@ -11,7 +11,7 @@
     <meta property="og:title" content="Nicholas Carr" />
     <meta
       property="og:description"
-      content="Engineering student, developer, designer"
+      content="Nicholas Carr - UBC Engineering Physics"
     />
     <meta
       property="og:image"
@@ -44,17 +44,16 @@
         });
       }
     </script>
-    <style></style>
   </head>
   <body>
     <div class="background"></div>
     <header class="static">
       <h1>Nicholas <small>Carr</small></h1>
-      <h2>Engineering student, developer, designer</h2>
+      <h2>UBC Engineering Physics</h2>
     </header>
     <header class="sticky">
       <object
-        class="amazing-logo"
+        class="logo"
         type="image/svg+xml"
         data="icons/logo.svg"
       ></object>
@@ -64,20 +63,20 @@
             <img
               class="icon-button devpost"
               src="icons/devpost.svg"
-              aria-label="My Devpost"
+              aria-label="Devpost"
             />
           </span>
         </a>
         <a href="https://linkedin.com/in/nicholas-carr">
           <span class="fa-stack">
             <i class="fas fa-circle fa-stack-2x fa-inverse"></i>
-            <i class="fab fa-linkedin fa-stack-1x" aria-label="My LinkedIn"></i>
+            <i class="fab fa-linkedin fa-stack-1x" aria-label="LinkedIn"></i>
           </span>
         </a>
         <a href="https://github.com/ncarr">
           <span class="fa-stack">
             <i class="fas fa-circle fa-stack-2x fa-inverse"></i>
-            <i class="fab fa-github fa-stack-1x" aria-label="My GitHub"></i>
+            <i class="fab fa-github fa-stack-1x" aria-label="GitHub"></i>
           </span>
         </a>
       </div>
@@ -90,91 +89,84 @@
     <section class="intro">
       <p class="big">Hi there,</p>
       <p>
-        I'm Nicholas and I build software. I'm an Engineering Physics student at
-        the University of British Columbia. In my spare time I also attend
-        hackathons and other local tech events, and have hosted a workshop on
-        React Native development. I love to work with technology because it's
-        something that's always around. I have been programming since I was
-        eleven and continue to learn more every day.
+        I am passionate about electrical, software, and mechatronics engineering, with an interest in embedded systems. With experience working with microcontrollers in Arduino and programming in Python, TypeScript, and C, I love to apply my skills to interesting and impactful projects and always look for opportunities to learn something new.
       </p>
     </section>
     <section class="highlight">
       <h2>Things I've worked with</h2>
       <ul>
-        <li>Node.js</li>
-        <li>Vue</li>
-        <li>GraphQL</li>
-        <li>MongoDB</li>
-        <li>Java</li>
+        <li>Altium</li>
+        <li>SolidWorks</li>
+        <li>Arduino</li>
         <li>Python</li>
-        <li>Android</li>
+        <li>TypeScript/JavaScript</li>
+        <li>Java</li>
+        <li>ROS</li>
+        <li>Jupyter/NumPy/SciPy</li>
+        <li>MATLAB</li>
       </ul>
     </section>
     <section class="projects">
-      <h2>Experience</h2>
+      <h2>Projects</h2>
       <section class="article-list">
-        <a href="https://cursor.club">
-          <article>
-            <h3>Cursor</h3>
-            <p>
-              I am a co-founder of Cursor, a youth organization that hosts
-              events to teach local youth to code.
-            </p>
-          </article>
-        </a>
-        <a href="https://edsby.com">
-          <article>
-            <h3>Edsby</h3>
-            <p>
-              I did a high-school co-op placement at Edsby, an educational
-              software company, during the second semester of the 2017-2018
-              school year. I worked on QA testing, video editing, and created
-              demo content.
-            </p>
-          </article>
-        </a>
-        <a href="https://cursor.club/reactnative">
-          <article>
-            <h3>React Native Workshop</h3>
-            <p>
-              I co-lead a workshop in July 2018 at the local library where
-              students built a small todo list app for their phones using React
-              Native.
-            </p>
-          </article>
-        </a>
-        <a href="https://thinq.tech">
-          <article>
-            <h3>Thinq</h3>
-            <p>
-              My Thacks 2 team made Thinq, a Node.js app that uses the Twilio
-              API to send information usually accessible through the internet
-              over text messages, so that people without data plans can still
-              access weather, directions, and other useful information. We won
-              first place.
-            </p>
-          </article>
-        </a>
-        <a href="https://github.com/Saik3/CipherLHD-gifters">
-          <article>
-            <h3>Gifterz</h3>
-            <p>
-              I mentored a team at Cipher Local Hack Day 2016 and helped them
-              build their first web app while teaching them HTML, JS, and CSS
-              and helping them use developer tools like GitHub and Atom. I also
-              added Firebase sign-in to the app.
-            </p>
-          </article>
-        </a>
-        <a href="https://hackinggood.pledgesforchange.com/toronto/">
-          <article>
-            <h3>Hacking Good</h3>
-            <p>
-              I volunteered with event logistics at Hacking Good 2017. I helped
-              guide attendees into the event and transported food.
-            </p>
-          </article>
-        </a>
+        <article>
+          <h3>Autonomous Can Collecting Robot - The Revolver</h3>
+          <time datetime="2021-08">May - Aug 2021</time>
+          <p>
+            As part of a design course, I designed an autonomous robot to pick up and drop off soda cans in a team of 4. The robot operates by scooping the can into a bucket mounted to the front of the robot using a motorized arm, then flipping the bucket up and emptying the can into the next empty spot in the revolving storage area. The storage area hangs over the side of the robot so that cans can fall directly from the storage area to the drop-off bin once the robot reaches the centre of the track.
+          </p>
+          <p>
+            I designed the three circuit boards on the robot using EasyEDA. The main purpose of the design was to be modular and easy to test. Each of the sensors and motors on the robot are connected with removable connectors to headers on the board. As we each hand-soldered our own robots, it was important that we had a consistent and testable design so we could all help with troubleshooting. The motor drivers are on separate boards, a separate power supply, and connected to the control boards through optoisolators to reduce the impacts of electrical noise.
+          </p>
+          <p>
+            I also created an <a href="https://the-revolver-team-13-enph-253.github.io/">AR demo</a> of the can collection process in Blender to help visualize the robot's mode of operation.
+          </p>
+          <img src="images/robot_ctrl.jpg" alt="Robot control board" />
+          <img src="images/robot_track.jpg" alt="Robot travelling along track" />
+        </article>
+        <article>
+          <h3>Autonomous Parking Enforcement Competition</h3>
+          <time datetime="2021-12">Sep - Dec 2021</time>
+          <p>
+            I wrote an autonomous robot controller in Python using the ROS framework to drive around a track and record license plates from parked cars in a Gazebo simulation for a course competition. The controller consisted of a single ROS node that processed each frame from the camera in simulation using OpenCV. The controller uses Keras and TensorFlow to perform character recognition on the license plates. Line following was done using PID control using the location of the road markings from OpenCV.
+          </p>
+          <p>
+            Most of the robot controller code is dedicated to a classical computer vision pipeline that produces consistent input images for the neural network. The controller performs semantic segmentation on the input image using the cv2.inRange() function to create masks containing pixels that match the colour of desired objects in the image. These masks are shown in the right half of the figure below. Contours are then drawn over solid regions of the masks, and license plates are then perspective transformed to a 100x50 pixel image and the mask of the license plate text is sent to the neural network.
+          </p>
+          <p>
+            The convolutional neural network that processes license plate images was trained on 800 generated images of license plates. In practice, this network is sufficiently reliable that it did not need to be trained on images extracted from the simulation, and no data augmentation was required.
+          </p>
+          <img src="images/parking.png" alt="Raw camera image and corresponding debug image" />
+        </article>
+        <article>
+          <h3>Assembly Debug Adapter</h3>
+          <time datetime="2022-03">Mar 2022</time>
+          <p>
+            For a microcomputers course, we used a command-line based debugger to step through our assembly code as it ran on our microcontroller board. I wanted to integrate this with Visual Studio Code to be able to see all of the information the debugger provided at a glance in context with the source code. I looked into the Debug Adapter Protocol used by VS Code and realized that most of the features of the protocol were already implemented by the command-line debugger, so I wrote a TypeScript program to receive Debug Adapter Protocol requests, send them to the debugger over the command line, parse the responses and send them back.
+          </p>
+          <p>
+            The basic structure of the project is a runtime that sends commands and receives responses from the debugger and a debug adapter which calls methods on the runtime whenever VS Code requests information. Each method in the runtime sends a command to the debugger and waits asynchronously for a response, which it parses using a simple RegEx. Each time a method waits for a response, it sends its RegEx to a scheduler, which queues parsers in the order they were called to ensure that each line of output is read in order. I initially ran into concurrency issues where a command that was called later would start reading output before a previous command was finished. Since I used the await keyword to wait for parsers, they were not being queued atomically and it was possible for another command to queue its parser while the first one was still waiting. I fixed this by allowing commands to schedule multiple parsers together so they only had to call await once.
+          </p>
+          <p>
+            While working on this project, I learned a lot about how applications interact with the terminal. Initially, I tried running the debugger as a subprocess and piping standard input and output into the debug adapter, but the debugger detected that the debug adapter was not a terminal and buffered its output until it finished executing, which made it impossible to read output in real-time. Since I needed to present the debug adapter as a terminal to get the debugger to send output in real-time, I looked into pseudoterminals in Node.js and landed on the node-pty module, which presents the application as a pseudoterminal when it runs a subprocess. I also faced issues getting the debug adapter to run as a VS Code extension since node-pty is a native module and needs to be compiled for the specific version of Node.js used. After plenty of attempts recompiling the individual module for the version of Node.js used in VS Code, I was able to get it to run by reinstalling the entire project for the specific version of Electron used in VS Code.
+          </p>
+          <p>
+            This project is available on <a href="https://github.com/ncarr/cmon51-debugadapter">GitHub</a>.
+          </p>
+          <img src="images/debug_adapter.png" alt="Debug adapter running in Visual Studio Code after hitting a breakpoint" />
+        </article>
+        <article>
+          <h3>Video Doorbell Project</h3>
+          <time datetime="2020-08">Aug 2020</time>
+          <p>
+            Since off the shelf video doorbells are very expensive and often require a subscription to use, I tasked myself with building one with an ESP32 camera module that costs less than 25 USD. I found an existing open-source video streaming project with the same hardware and modified it to turn on when motion is detected and automatically shutoff after 30 s of inactivity to save battery. I also added support for displaying messages on the integrated display by sending messages to the device over MQTT.
+          </p>
+          <p>
+            This project is available on <a href="https://github.com/ncarr/esp32-cam-mjpeg-multiclient">GitHub</a>
+          </p>
+          <img src="images/doorbell_activated.jpg" alt="Doorbell activated and recording" />
+          <img src="images/doorbell_message.jpg" alt="Doorbell displaying a user-rpovided message" />
+        </article>
       </section>
     </section>
     <section>
