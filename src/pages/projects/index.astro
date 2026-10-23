@@ -1,0 +1,49 @@
+---
+import { getCollection } from "astro:content";
+import ProjectCard from "../../components/ProjectCard.astro";
+import ProjectHighlights from "../../components/ProjectHighlights.astro";
+import ReadMoreLink from "../../components/ReadMoreLink.astro";
+import SectionHeading from "../../components/SectionHeading.astro";
+import SiteLayout from "../../components/SiteLayout.astro";
+import SocialLinks from "../../components/SocialLinks.astro";
+import { site } from "../../content/site";
+import { newestFirst, projectsNewestFirst } from "../../utils/content";
+
+const allPosts = newestFirst(await getCollection("blog"));
+const projects = projectsNewestFirst(
+  allPosts.filter((post) => post.data.tags.includes("project")),
+);
+const highlights = projects.filter((post) => post.data.projectHighlight);
+---
+
+<SiteLayout
+  title="Projects | Nicholas Carr"
+  description="Selected projects and project write-ups by Nicholas Carr."
+>
+  <section class="page-section content-width" aria-labelledby="projects-title">
+    <h1 class="page-title" id="projects-title">Projects</h1>
+  </section>
+
+  <ProjectHighlights projects={highlights} showReadMore={false} />
+
+  <section class="page-section content-width" aria-labelledby="project-profiles">
+    <SectionHeading title="More projects" id="project-profiles" />
+    <SocialLinks
+      links={site.socialLinks.filter((link) =>
+        ["GitHub", "Devpost"].includes(link.label)
+      )}
+    />
+  </section>
+
+  <section class="page-section content-width" aria-labelledby="all-projects">
+    <SectionHeading title="All projects" id="all-projects" />
+    {projects.length ? (
+      <div class="card-grid">
+        {projects.map((post) => <ProjectCard post={post} />)}
+      </div>
+    ) : (
+      <p class="empty-state">Project write-ups will appear here.</p>
+    )}
+    <ReadMoreLink href="/blog/">Browse the blog</ReadMoreLink>
+  </section>
+</SiteLayout>

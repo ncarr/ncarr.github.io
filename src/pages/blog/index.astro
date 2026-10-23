@@ -1,0 +1,44 @@
+---
+import { getCollection } from "astro:content";
+import PostCard from "../../components/PostCard.astro";
+import ReadMoreLink from "../../components/ReadMoreLink.astro";
+import SectionHeading from "../../components/SectionHeading.astro";
+import SiteLayout from "../../components/SiteLayout.astro";
+import { newestFirst } from "../../utils/content";
+
+const posts = newestFirst(await getCollection("blog"));
+const highlights = posts.filter((post) => post.data.blogHighlight);
+---
+
+<SiteLayout
+  title="Blog | Nicholas Carr"
+  description="Writing and project notes by Nicholas Carr."
+>
+  <section class="page-section content-width" aria-labelledby="blog-title">
+    <h1 class="page-title" id="blog-title">Blog</h1>
+    <p class="page-intro">Writing, notes, and project stories.</p>
+  </section>
+
+  <section class="page-section content-width" aria-labelledby="blog-highlights">
+    <SectionHeading title="Featured posts" id="blog-highlights" />
+    {highlights.length ? (
+      <div class="card-grid">
+        {highlights.map((post) => <PostCard post={post} />)}
+      </div>
+    ) : (
+      <p class="empty-state">Featured posts will appear here.</p>
+    )}
+  </section>
+
+  <section class="page-section content-width" aria-labelledby="all-posts">
+    <SectionHeading title="All posts" id="all-posts" />
+    {posts.length ? (
+      <div class="archive-list">
+        {posts.map((post) => <PostCard post={post} />)}
+      </div>
+    ) : (
+      <p class="empty-state">Blog posts will appear here.</p>
+    )}
+    <ReadMoreLink href="/">Back to home</ReadMoreLink>
+  </section>
+</SiteLayout>

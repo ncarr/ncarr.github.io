@@ -1,0 +1,29 @@
+---
+import { Image } from "astro:assets";
+import type { BlogPost } from "../utils/content";
+import { formatDate, postUrl } from "../utils/content";
+
+interface Props {
+  post: BlogPost;
+}
+
+const { post } = Astro.props;
+---
+
+<a class="content-card post-card" href={postUrl(post)}>
+  {post.data.cardImage && (
+    <Image
+      class="card-image"
+      src={post.data.cardImage}
+      alt={post.data.cardImageAlt ?? ""}
+      loading="lazy"
+    />
+  )}
+  <div class="card-copy">
+    <h3>{post.data.title}</h3>
+    <time class="card-date" datetime={post.data.pubDate.toISOString()}>
+      {formatDate(post.data.pubDate)}
+    </time>
+    <p>{post.data.summary}</p>
+  </div>
+</a>

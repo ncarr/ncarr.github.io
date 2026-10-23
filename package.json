@@ -1,0 +1,15 @@
+{
+  "name": "nicholas-carr-personal-site",
+  "type": "module",
+  "version": "1.0.0",
+  "scripts": {
+    "dev": "astro dev",
+    "build": "astro check && astro build",
+    "preview": "astro preview",
+    "astro": "astro"
+  },
+  "dependencies": {
+    "@astrojs/mdx": "^8.1.1",
+    "astro": "^7.4.2"
+  }
+}

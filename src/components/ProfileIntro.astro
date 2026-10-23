@@ -1,0 +1,35 @@
+---
+import { Image } from "astro:assets";
+import { site } from "../content/site";
+import SocialLinks from "./SocialLinks.astro";
+---
+
+<section class="profile content-width" aria-labelledby="profile-name">
+  <div class="avatar" aria-hidden="true">
+    {
+      site.avatar ? (
+        <Image
+          src={site.avatar}
+          widths={[124, 184, 276, 368]}
+          sizes="auto, (max-width: 38rem) 6rem, 8rem"
+          alt=""
+        />
+      ) : (
+        <span>NC</span>
+      )
+    }
+  </div>
+  <div class="profile-copy">
+    <h1 id="profile-name">{site.name}</h1>
+    {site.tagline && <p class="tagline">{site.tagline}</p>}
+    <SocialLinks links={site.socialLinks} />
+    <div class="profile-summary">
+      {site.summary.map((paragraph) => <p>{paragraph}</p>)}
+      {
+        !site.summary.length && (
+          <p class="empty-state">A short introduction will appear here.</p>
+        )
+      }
+    </div>
+  </div>
+</section>

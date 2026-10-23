@@ -1,0 +1,31 @@
+---
+import BaseHead from "./BaseHead.astro";
+import Navbar from "./Navbar.astro";
+import { site } from "../content/site";
+import "../styles/global.css";
+
+interface Props {
+  title: string;
+  description: string;
+}
+
+const { title, description } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <BaseHead title={title} description={description} />
+  </head>
+  <body>
+    <Navbar />
+    <main id="main">
+      <slot />
+    </main>
+    <footer class="site-footer">
+      <div class="content-width">
+        <p>© {new Date().getFullYear()} {site.name}</p>
+      </div>
+    </footer>
+  </body>
+</html>

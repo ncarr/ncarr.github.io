@@ -1,0 +1,19 @@
+---
+import type { SocialLink } from "../content/site";
+
+interface Props {
+  links: SocialLink[];
+}
+
+const { links } = Astro.props;
+---
+
+<ul class="social-links" aria-label="Profile links">
+  {links.map((link) => (
+    <li>
+      <a href={link.href} target="_blank" rel="noreferrer">
+        {link.label}<span class="visually-hidden"> (opens in a new tab)</span>
+      </a>
+    </li>
+  ))}
+</ul>

@@ -1,0 +1,71 @@
+---
+import { getCollection } from "astro:content";
+import Education from "../components/Education.astro";
+import ExperienceTimeline from "../components/ExperienceTimeline.astro";
+import PostCard from "../components/PostCard.astro";
+import ProfileIntro from "../components/ProfileIntro.astro";
+import ProjectHighlights from "../components/ProjectHighlights.astro";
+import ReadMoreLink from "../components/ReadMoreLink.astro";
+import SectionHeading from "../components/SectionHeading.astro";
+import SiteLayout from "../components/SiteLayout.astro";
+import { site } from "../content/site";
+import { newestFirst, projectsNewestFirst } from "../utils/content";
+
+const [blogEntries, experienceEntries] = await Promise.all([
+  getCollection("blog"),
+  getCollection("experience"),
+]);
+const posts = newestFirst(blogEntries);
+const projectHighlights = projectsNewestFirst(
+  posts.filter(
+    (post) => post.data.projectHighlight && post.data.tags.includes("project"),
+  ),
+);
+const blogHighlights = posts.filter((post) => post.data.blogHighlight);
+const highlightedIds = new Set([
+  ...projectHighlights.map((post) => post.id),
+  ...blogHighlights.map((post) => post.id),
+]);
+const recentPosts = posts.filter((post) => !highlightedIds.has(post.id)).slice(0, 3);
+const roles = [...experienceEntries].sort(
+  (left, right) =>
+    right.data.startDate.getTime() - left.data.startDate.getTime(),
+);
+---
+
+<SiteLayout
+  title={site.name}
+  description="Portfolio, experience, and writing by Nicholas Carr."
+>
+  <ProfileIntro />
+  <ProjectHighlights projects={projectHighlights} />
+
+  <section class="page-section content-width" aria-labelledby="experience">
+    <SectionHeading title="Work experience" id="experience" />
+    <ExperienceTimeline roles={roles} />
+    <h3 class="section-subheading">Education</h3>
+    <Education />
+    <ReadMoreLink href={site.resumeUrl}>View PDF resume</ReadMoreLink>
+    <span class="link-separator" aria-hidden="true"> · </span>
+    <a
+      class="read-more"
+      href="https://linkedin.com/in/nicholas-carr"
+      target="_blank"
+      rel="noreferrer"
+    >
+      More on LinkedIn<span class="visually-hidden"> (opens in a new tab)</span>
+    </a>
+  </section>
+
+  <section class="page-section content-width" aria-labelledby="recent-writing">
+    <SectionHeading title="Recent writing" id="recent-writing" />
+    {recentPosts.length ? (
+      <div class="card-grid">
+        {recentPosts.map((post) => <PostCard post={post} />)}
+      </div>
+    ) : (
+      <p class="empty-state">Recent blog posts will appear here.</p>
+    )}
+    <ReadMoreLink href="/blog/">Browse the blog</ReadMoreLink>
+  </section>
+</SiteLayout>
