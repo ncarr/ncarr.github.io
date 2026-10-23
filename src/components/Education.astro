@@ -1,0 +1,27 @@
+---
+import { site } from "../content/site";
+import { formatDate } from "../utils/content";
+---
+
+{site.education.length ? (
+  <ul class="education-list">
+    {site.education.map((entry) => (
+      <li>
+        <h3>{entry.degree}</h3>
+        <p>{entry.institution}</p>
+        {(entry.startDate || entry.endDate) && (
+          <p class="card-date">
+            {entry.startDate ? formatDate(new Date(entry.startDate)) : ""}
+            {entry.startDate && entry.endDate ? " – " : ""}
+            {entry.endDate ? formatDate(new Date(entry.endDate)) : ""}
+          </p>
+        )}
+        {entry.highlights.length > 0 && (
+          <ul>{entry.highlights.map((highlight) => <li>{highlight}</li>)}</ul>
+        )}
+      </li>
+    ))}
+  </ul>
+) : (
+  <p class="empty-state">Education details will appear here.</p>
+)}

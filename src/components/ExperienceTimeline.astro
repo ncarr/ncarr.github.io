@@ -1,0 +1,45 @@
+---
+import type { CollectionEntry } from "astro:content";
+import { formatDate } from "../utils/content";
+
+interface Props {
+  roles: CollectionEntry<"experience">[];
+}
+
+const { roles } = Astro.props;
+---
+
+{roles.length ? (
+  <ol class="timeline">
+    {roles.map((entry) => (
+      <li class="timeline-item">
+        <div class="timeline-heading">
+          <div>
+            <h3>{entry.data.role}</h3>
+            <p class="organization">{entry.data.organization}</p>
+          </div>
+          <p class="date-range">
+            <time datetime={entry.data.startDate.toISOString()}>
+              {formatDate(entry.data.startDate)}
+            </time>
+            {" – "}
+            {entry.data.endDate ? (
+              <time datetime={entry.data.endDate.toISOString()}>
+                {formatDate(entry.data.endDate)}
+              </time>
+            ) : (
+              "Present"
+            )}
+          </p>
+        </div>
+        {entry.data.highlights.length > 0 && (
+          <ul class="experience-highlights">
+            {entry.data.highlights.map((highlight) => <li>{highlight}</li>)}
+          </ul>
+        )}
+      </li>
+    ))}
+  </ol>
+) : (
+  <p class="empty-state">Work experience entries will appear here.</p>
+)}

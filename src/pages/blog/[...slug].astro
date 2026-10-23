@@ -1,0 +1,54 @@
+---
+import { getCollection, render, type CollectionEntry } from "astro:content";
+import SiteLayout from "../../components/SiteLayout.astro";
+import { formatDate, projectDateRange } from "../../utils/content";
+import { Image } from "astro:assets";
+
+interface Props {
+  post: CollectionEntry<"blog">;
+}
+
+export async function getStaticPaths() {
+  const posts = await getCollection("blog");
+  return posts.map((post) => ({
+    params: { slug: post.id },
+    props: { post },
+  }));
+}
+
+const { post } = Astro.props;
+const { Content } = await render(post);
+const projectDates = projectDateRange(post);
+const isProject = post.data.tags.includes("project");
+---
+
+<SiteLayout
+  title={`${post.data.title} | Nicholas Carr`}
+  description={post.data.summary}
+>
+  <article class="article content-width">
+    <header class="article-header">
+      <h1>{post.data.title}</h1>
+      <p class="article-summary">{post.data.summary}</p>
+      <p class="card-date">
+        Published <time datetime={post.data.pubDate.toISOString()}>
+          {formatDate(post.data.pubDate)}
+        </time>
+      </p>
+      {projectDates && <p class="card-date">Project: {projectDates}</p>}
+    </header>
+    {post.data.cardImage && (
+      <Image
+        class="article-image"
+        src={post.data.cardImage}
+        alt={post.data.cardImageAlt ?? ""}
+      />
+    )}
+    <div class="article-content">
+      <Content />
+    </div>
+    <a class="back-link" href={isProject ? "/projects/" : "/blog/"}>
+      ← Back to {isProject ? "projects" : "blog"}
+    </a>
+  </article>
+</SiteLayout>

@@ -1,0 +1,24 @@
+---
+import { site } from "../content/site";
+import Logo from "../../public/icons/logo.svg";
+
+const path = Astro.url.pathname;
+const blogActive = path.startsWith("/blog");
+const projectsActive = path.startsWith("/projects");
+---
+
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header">
+  <nav class="nav-wrap" aria-label="Main navigation">
+    <a class="brand" href="/" aria-label={`${site.name} home`}>
+      <Logo class="logo" />
+      {site.name}
+    </a>
+    <div class="nav-links">
+      <a href="/blog/" aria-current={blogActive ? "page" : undefined}>Blog</a>
+      <a href="/projects/" aria-current={projectsActive ? "page" : undefined}>
+        Projects
+      </a>
+    </div>
+  </nav>
+</header>

@@ -1,0 +1,39 @@
+- id: alljoined-2025
+  organization: Alljoined
+  role: Software Engineer
+  startDate: 2025-09-01
+  endDate: 2026-10-01
+  highlights:
+    - Developed, tested, and integrated system for streaming brain signals to a compute cluster over the network using Python, NumPy, MNE, and LSL, enabling live inference on brain data
+    - Integrated Next.js-based internal scheduling webapp with Python experiment data management tool using FastAPI and Prisma, eliminating duplicate pre-session data entry
+    - Rebuilt alljoined.com to match new Figma design using Next.js and Tailwind CSS
+    - Owned web codebases and deployments, introduced a staging environment and database migrations to derisk updates, and Zod and TanStack Form to deduplicate validation logic
+- id: tesla-2023
+  organization: Tesla
+  role: Steering Software Integration Intern
+  startDate: 2023-05-01
+  endDate: 2023-08-01
+  highlights:
+    - Wrote automated hardware-in-the-loop tests to validate CAN interfaces using pytest
+    - Updated factory calibration routines to support new ECU interfaces
+    - Created an automated tool to analyze aggregate data from the fleet using SQL queries
+    - Analyzed CAN signal traces using Vector CANape to verify correct operation between interconnected ECUs
+- id: neupeak-2022
+  organization: Neupeak
+  role: Robotics Software Engineer Intern
+  startDate: 2022-07-01
+  endDate: 2022-08-01
+  highlights:
+    - Built a web-based 3D visualization using THREE.js and live data from ROS to visualize the robot’s pose in real time, allowing operators to see the state of the robot remotely
+    - Implemented a 3D viewer to review previous point clouds and robot actions, allowing developers to debug reported errors from the field in depth
+- id: bioform-2022
+  organization: Bioform
+  role: Control Systems Intern
+  startDate: 2022-05-01
+  endDate: 2022-06-01
+  highlights:
+    - Designed and wired sensor circuits for industrial control systems, allowing signals to be read by a controller and data acquisition system
+    - Specified and ordered wiring using component datasheets and application requirements
+    - Configured and tuned PID control for R&D production facility
+    - Wrote an application using Python and Qt to collect experiment data and control the facility
+    - Processed and generated plots for data combined from dozens of experiments using MATLAB

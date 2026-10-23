@@ -1,0 +1,25 @@
+---
+import type { BlogPost } from "../utils/content";
+import ProjectCard from "./ProjectCard.astro";
+import ReadMoreLink from "./ReadMoreLink.astro";
+import SectionHeading from "./SectionHeading.astro";
+
+interface Props {
+  projects: BlogPost[];
+  showReadMore?: boolean;
+}
+
+const { projects, showReadMore = true } = Astro.props;
+---
+
+<section class="page-section content-width" aria-labelledby="project-highlights">
+  <SectionHeading title="Selected projects" id="project-highlights" />
+  {projects.length ? (
+    <div class="card-grid">
+      {projects.map((post) => <ProjectCard post={post} />)}
+    </div>
+  ) : (
+    <p class="empty-state">Selected project write-ups will appear here.</p>
+  )}
+  {showReadMore && <ReadMoreLink href="/projects/">Explore all projects</ReadMoreLink>}
+</section>
