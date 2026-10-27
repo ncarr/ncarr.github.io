@@ -1,7 +1,7 @@
 ---
 title: 8051 Assembly Debug Adapter
 pubDate: 2022-03-27
-summary: Adding VSCode debugging support to an assembly toolchain
+summary: Added VSCode debugging support to an assembly toolchain
 tags: [project]
 cardImage: ../../assets/debug_adapter.png
 cardImageAlt: Debug adapter running in Visual Studio Code after hitting a breakpoint
