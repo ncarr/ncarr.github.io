@@ -33,7 +33,7 @@ export const site = {
       startDate: "2019-09-01",
       endDate: "2024-05-01",
       highlights: [
-        "Course selection included numerical methods, automatic control, signals and systems, software construction, machine design, quantum mechanics, and differential equations",
+        "Course selection included machine design, automatic control, fluid mechanics, differential equations, signals and systems, software construction, optics, quantum mechanics, lab techniques, and electronic circuits",
       ],
     },
   ] as EducationEntry[],

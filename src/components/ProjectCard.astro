@@ -12,14 +12,18 @@ const dateRange = projectDateRange(post);
 ---
 
 <a class="content-card project-card" href={postUrl(post)}>
-  {post.data.cardImage && (
-    <Image
-      class="card-image"
-      src={post.data.cardImage}
-      alt={post.data.cardImageAlt ?? ""}
-      loading="lazy"
-    />
-  )}
+  {
+    post.data.cardImage && (
+      <Image
+        class="card-image"
+        src={post.data.cardImage}
+        alt={post.data.cardImageAlt ?? ""}
+        widths={[348, 696, 1120, 2240]}
+        sizes="auto, (max-width: 595px) 100vw, (max-width: 895px) 50vw, (max-width: 1128px) 33vw, 348px"
+        loading="lazy"
+      />
+    )
+  }
   <div class="card-copy">
     <h3>{post.data.title}</h3>
     {dateRange && <p class="card-date">{dateRange}</p>}

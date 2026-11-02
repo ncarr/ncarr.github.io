@@ -40,6 +40,7 @@ const isProject = post.data.tags.includes("project");
     {post.data.cardImage && (
       <Image
         class="article-image"
+        layout="full-width"
         src={post.data.cardImage}
         alt={post.data.cardImageAlt ?? ""}
       />
